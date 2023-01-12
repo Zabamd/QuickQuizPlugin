@@ -1,0 +1,41 @@
+.quizWrapper {
+  border-radius: 46px;
+  background: #eeeeec;
+  box-shadow: 5px 5px 4px #989897, -5px -5px 4px #ffffff;
+  padding: 50px;
+  margin: 50px;
+
+
+
+  @mixin icon {
+    position: relative;
+    top: -5px;
+    transition: all 0.25s linear;
+  }
+
+  .iconButton {
+    text-decoration: none;
+  }
+
+  .correctAnswer >  .selectAnswerIcon {
+    color: #6bec6b ;
+  }
+  
+  .selectAnswerIcon {
+    @include icon;
+    color: #000;
+    border-radius: 100%;
+    &:hover {
+      transform: scale(1.5);
+      color: #2f642f;
+    }
+  }
+  .deleteAnswerIcon {
+    @include icon;
+    color: #f75555;
+    &:hover {
+      transform: scale(1.5);
+      color: #6d2828;
+    }
+  }
+}
