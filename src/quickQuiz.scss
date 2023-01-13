@@ -1,12 +1,14 @@
-.quizWrapper {
+.quickQuiz_quizEditWrapper {
   border-radius: 46px;
   background: #eeeeec;
   box-shadow: 5px 5px 4px #989897, -5px -5px 4px #ffffff;
   padding: 50px;
   margin: 50px;
 
-
-
+  .correctAnswer > .selectAnswerIcon {
+    color: #6bec6b;
+  }
+  
   @mixin icon {
     position: relative;
     top: -5px;
@@ -17,10 +19,6 @@
     text-decoration: none;
   }
 
-  .correctAnswer >  .selectAnswerIcon {
-    color: #6bec6b ;
-  }
-  
   .selectAnswerIcon {
     @include icon;
     color: #000;

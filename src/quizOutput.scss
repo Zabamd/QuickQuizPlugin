@@ -1,3 +1,39 @@
-.empty{
-    display: none;
+.quickQuiz_quizPlaceholder {
+  display: none;
+}
+
+.quickQuiz_quizFrontWrapper {
+  border-radius: 46px;
+  background: #eeeeec;
+  box-shadow: 5px 5px 4px #989897, -5px -5px 4px #ffffff;
+  padding: 25px 50px 50px 50px;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .questionHeading {
+    margin: 0;
+    padding: 15px;
+    border-bottom: 1px solid black;
+    width: 100%;
+  }
+
+  .answerButton {
+    height: 50px;
+    width: 100%;
+    margin: 10px;
+    border: 0px;
+    background: #eeeeec;
+    color: black;
+    font-size: 16px;
+
+    transition: all 0.25s linear;
+    &:hover {
+      border-radius: 20px;
+      background: #eeeeec;
+      box-shadow: inset 10px 10px 20px #989897, inset -10px -10px 20px #989897;
+    }
+  }
 }
