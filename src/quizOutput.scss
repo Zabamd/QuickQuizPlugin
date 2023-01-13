@@ -28,12 +28,46 @@
     background: #eeeeec;
     color: black;
     font-size: 16px;
-
+    border-radius: 20px;
     transition: all 0.25s linear;
+
     &:hover {
-      border-radius: 20px;
-      background: #eeeeec;
       box-shadow: inset 10px 10px 20px #989897, inset -10px -10px 20px #989897;
     }
+  }
+}
+.quickQuiz_quizFrontWrapper.result-false {
+  animation: overlayAnimationIncorrect 2s linear;
+}
+.quickQuiz_quizFrontWrapper.result-true {
+  animation: overlayAnimationCorrect 2s linear;
+}
+
+@keyframes overlayAnimationCorrect {
+  0% {
+    background: #eeeeec;
+    opacity: 1;
+  }
+  50% {
+    background-color: #00ff00;
+    opacity: 0.5;
+  }
+  100% {
+    background: #eeeeec;
+    opacity: 1;
+  }
+}
+@keyframes overlayAnimationIncorrect {
+  0% {
+    background: #eeeeec;
+    opacity: 1;
+  }
+  50% {
+    background-color: #ff0000;
+    opacity: 0.5;
+  }
+  100% {
+    background: #eeeeec;
+    opacity: 1;
   }
 }

@@ -5,8 +5,9 @@ import { useState } from "react";
 
 const QuizFront = ({ props }) => {
   const [haveGuessed, setHaveGuessed] = useState("");
+
   const onAnswerClick = (answerIndex) => {
-    if (answerIndex == props.correctAnswer) {
+    if (answerIndex === Number(props.correctAnswer)) {
       setHaveGuessed(true);
     } else {
       setHaveGuessed(false);
@@ -14,8 +15,7 @@ const QuizFront = ({ props }) => {
   };
 
   return (
-    <div className="quickQuiz_quizFrontWrapper">
-      {haveGuessed === true && <div className="quizFrontOverLay"></div>}
+    <div className={`quickQuiz_quizFrontWrapper result-${haveGuessed}`}>
       <h3 className="questionHeading">{props.question}</h3>
       {props.answers.map((answer, answerIndex) => {
         return (
