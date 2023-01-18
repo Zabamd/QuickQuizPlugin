@@ -1,17 +1,35 @@
+$incorrectAnswerColor: linear-gradient(145deg, #dd3838, #ff4242);
+$correctAnswerColor: linear-gradient(145deg, #4ede4e, #5dff5d);
+$backgroundColor: linear-gradient(145deg, #e6e6e6, #ffffff);
+$shadowColor: #9c9c9c;
+$boxShadow: 6px 6px 0px $shadowColor, -6px -6px 0px #ffffff;
+$incorrectAnswerBoxShadow: 10px 10px 0px #a42a2a;
+$correctAnswerBoxShadow: 10px 10px 0px #3aa53a;
+
 .quickQuiz_quizPlaceholder {
   display: none;
 }
 
 .quickQuiz_quizFrontWrapper {
-  border-radius: 46px;
-  background: #eeeeec;
-  box-shadow: 5px 5px 4px #989897, -5px -5px 4px #ffffff;
+  border-radius: 54px;
+  background: $backgroundColor;
+  box-shadow: $boxShadow;
   padding: 25px 50px 50px 50px;
   margin: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  &.result-false {
+    background: $incorrectAnswerColor;
+    box-shadow: $incorrectAnswerBoxShadow;
+  }
+
+  &.result-true {
+    background: $correctAnswerColor;
+    box-shadow: $correctAnswerBoxShadow;
+  }
 
   .questionHeading {
     margin: 0;
@@ -25,49 +43,35 @@
     width: 100%;
     margin: 10px;
     border: 0px;
-    background: #eeeeec;
+    background: $backgroundColor;
     color: black;
     font-size: 16px;
     border-radius: 20px;
-    transition: all 0.25s linear;
+    transition: all 0.25s ease-in-out;
 
     &:hover {
-      box-shadow: inset 10px 10px 20px #989897, inset -10px -10px 20px #989897;
+      box-shadow: inset 10px 10px 20px $shadowColor,
+        inset -10px -10px 20px $shadowColor;
     }
   }
-}
-.quickQuiz_quizFrontWrapper.result-false {
-  animation: overlayAnimationIncorrect 2s linear;
-}
-.quickQuiz_quizFrontWrapper.result-true {
-  animation: overlayAnimationCorrect 2s linear;
-}
 
-@keyframes overlayAnimationCorrect {
-  0% {
-    background: #eeeeec;
-    opacity: 1;
-  }
-  50% {
-    background-color: #00ff00;
-    opacity: 0.5;
-  }
-  100% {
-    background: #eeeeec;
-    opacity: 1;
-  }
-}
-@keyframes overlayAnimationIncorrect {
-  0% {
-    background: #eeeeec;
-    opacity: 1;
-  }
-  50% {
-    background-color: #ff0000;
-    opacity: 0.5;
-  }
-  100% {
-    background: #eeeeec;
-    opacity: 1;
+  .resultWrapper {
+    width: 100%;
+    background: $backgroundColor;
+
+    &.result-false {
+      background: $incorrectAnswerColor;
+    }
+
+    &.result-true {
+      background: $correctAnswerColor;
+    }
+
+    .afterGuessMessage {
+      padding: 25px;
+      margin: 0;
+      font-size: 24px;
+      text-align: center;
+    }
   }
 }

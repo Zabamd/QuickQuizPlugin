@@ -11,8 +11,10 @@ import {
 wp.blocks.registerBlockType("quizblock/mainquiz", {
   title: "Quiz Block",
   description: "My Quiz Block",
+  category: 'quickquiz',
   edit: EditComponent,
   save: SaveComponent,
+  icon: 'editor-paste-word',
   attributes: {
     Question: { type: "string" },
     AnswersArray: { type: "array", default: [] },
