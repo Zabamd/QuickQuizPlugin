@@ -1,1 +1,39 @@
-.quickQuiz_quizEditWrapper{background:#eeeeec;border-radius:46px;box-shadow:5px 5px 4px #989897,-5px -5px 4px #fff;margin:50px;padding:50px}.quickQuiz_quizEditWrapper .correctAnswer>.selectAnswerIcon{color:#6bec6b}.quickQuiz_quizEditWrapper .iconButton{text-decoration:none}.quickQuiz_quizEditWrapper .selectAnswerIcon{border-radius:100%;color:#000;position:relative;top:-5px;transition:all .25s linear}.quickQuiz_quizEditWrapper .selectAnswerIcon:hover{color:#2f642f;transform:scale(1.5)}.quickQuiz_quizEditWrapper .deleteAnswerIcon{color:#f75555;position:relative;top:-5px;transition:all .25s linear}.quickQuiz_quizEditWrapper .deleteAnswerIcon:hover{color:#6d2828;transform:scale(1.5)}
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/quickQuiz.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+.quickQuiz_quizEditWrapper {
+  border-radius: 46px;
+  background: #eeeeec;
+  box-shadow: 5px 5px 4px #989897, -5px -5px 4px #ffffff;
+  padding: 50px;
+  margin: 50px;
+}
+.quickQuiz_quizEditWrapper .correctAnswer > .selectAnswerIcon {
+  color: #6bec6b;
+}
+.quickQuiz_quizEditWrapper .iconButton {
+  text-decoration: none;
+}
+.quickQuiz_quizEditWrapper .selectAnswerIcon {
+  position: relative;
+  top: -5px;
+  transition: all 0.25s linear;
+  color: #000;
+  border-radius: 100%;
+}
+.quickQuiz_quizEditWrapper .selectAnswerIcon:hover {
+  transform: scale(1.5);
+  color: #2f642f;
+}
+.quickQuiz_quizEditWrapper .deleteAnswerIcon {
+  position: relative;
+  top: -5px;
+  transition: all 0.25s linear;
+  color: #f75555;
+}
+.quickQuiz_quizEditWrapper .deleteAnswerIcon:hover {
+  transform: scale(1.5);
+  color: #6d2828;
+}
+
+/*# sourceMappingURL=quickQuiz.css.map*/

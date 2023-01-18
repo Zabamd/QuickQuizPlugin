@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin name: Quick Quiz
+ * Plugin name: Single Choice Quiz
  * Author: Amadeusz Zabierowski 
  * Author URI: https://github.com/Zabamd
  * Description: Plugin for single choice quiz

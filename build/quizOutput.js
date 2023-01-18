@@ -1,1 +1,189 @@
-(()=>{"use strict";var e={n:t=>{var r=t&&t.__esModule?()=>t.default:()=>t;return e.d(r,{a:r}),r},d:(t,r)=>{for(var n in r)e.o(r,n)&&!e.o(t,n)&&Object.defineProperty(t,n,{enumerable:!0,get:r[n]})},o:(e,t)=>Object.prototype.hasOwnProperty.call(e,t)};const t=window.wp.element,r=window.React,n=window.ReactDOM;var s=e.n(n);const a=e=>{let{props:n}=e;const[s,a]=(0,r.useState)(!1),[c,o]=(0,r.useState)("");return(0,t.createElement)("div",{className:`quickQuiz_quizFrontWrapper result-${c}`},!s&&(0,t.createElement)("h3",{className:"questionHeading"},n.question),!s&&n.answers.map(((e,r)=>(0,t.createElement)("button",{onClick:()=>{(e=>{e===Number(n.correctAnswer)?o(!0):o(!1),a(!0)})(r)},className:"answerButton",key:r},e))),s&&(0,t.createElement)("div",{className:`resultWrapper result-${c}`},c&&(0,t.createElement)("p",{className:"afterGuessMessage"},"Congratulations! Correct Answer"),!c&&(0,t.createElement)("p",{className:"afterGuessMessage"}," Good luck next time!")))};addEventListener("DOMContentLoaded",(()=>{[].slice.call(document.getElementsByClassName("quickQuiz_quizPlaceholder")).forEach((e=>{const r=e.children[0].textContent,n=e.children[1].textContent.split(","),c=e.children[2].textContent;s().render((0,t.createElement)(a,{props:{question:r,answers:n,correctAnswer:c}}),e),e.classList.remove("quickQuiz_quizPlaceholder")}))}))})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/quizOutput.scss":
+/*!*****************************!*\
+  !*** ./src/quizOutput.scss ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "React" ***!
+  \************************/
+/***/ ((module) => {
+
+module.exports = window["React"];
+
+/***/ }),
+
+/***/ "react-dom":
+/*!***************************!*\
+  !*** external "ReactDOM" ***!
+  \***************************/
+/***/ ((module) => {
+
+module.exports = window["ReactDOM"];
+
+/***/ }),
+
+/***/ "@wordpress/element":
+/*!*********************************!*\
+  !*** external ["wp","element"] ***!
+  \*********************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["element"];
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+/*!***************************!*\
+  !*** ./src/quizOutput.js ***!
+  \***************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _quizOutput_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./quizOutput.scss */ "./src/quizOutput.scss");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "react-dom");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+const QuizFront = _ref => {
+  let {
+    props
+  } = _ref;
+  const [haveGuessed, setHaveGuessed] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false);
+  const [answeredCorrectly, setAnsweredCorrectly] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)("");
+  const onAnswerClick = answerIndex => {
+    if (answerIndex === Number(props.correctAnswer)) {
+      setAnsweredCorrectly(true);
+    } else {
+      setAnsweredCorrectly(false);
+    }
+    setHaveGuessed(true);
+  };
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: `quickQuiz_quizFrontWrapper result-${answeredCorrectly}`
+  }, !haveGuessed && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
+    className: "questionHeading"
+  }, props.question), !haveGuessed && props.answers.map((answer, answerIndex) => {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
+      onClick: () => {
+        onAnswerClick(answerIndex);
+      },
+      className: "answerButton",
+      key: answerIndex
+    }, answer);
+  }), haveGuessed && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: `resultWrapper result-${answeredCorrectly}`
+  }, answeredCorrectly && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "afterGuessMessage"
+  }, "Congratulations! Correct Answer"), !answeredCorrectly && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "afterGuessMessage"
+  }, " Good luck next time!")));
+};
+const onDOMContentLoaded = () => {
+  const placeholderSelector = [].slice.call(document.getElementsByClassName("quickQuiz_quizPlaceholder"));
+  placeholderSelector.forEach(element => {
+    const question = element.children[0].textContent;
+    const answers = element.children[1].textContent.split(",");
+    const correctAnswer = element.children[2].textContent;
+    react_dom__WEBPACK_IMPORTED_MODULE_3___default().render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(QuizFront, {
+      props: {
+        question,
+        answers,
+        correctAnswer
+      }
+    }), element);
+    element.classList.remove("quickQuiz_quizPlaceholder");
+  });
+};
+addEventListener("DOMContentLoaded", onDOMContentLoaded);
+})();
+
+/******/ })()
+;
+//# sourceMappingURL=quizOutput.js.map

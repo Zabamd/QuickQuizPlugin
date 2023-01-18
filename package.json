@@ -10,10 +10,10 @@
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "2.8.2"
   },
-  "name": "zabamd_quickquiz",
+  "name": "zabamd_single_choice_quiz",
   "description": "Wordpress plugin for single choice quiz",
   "version": "1.0.0",
-  "main": "quickQuiz.php",
+  "main": "singleChoiceQuiz.php",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Zabamd/QuizPlugin.git"
@@ -26,7 +26,7 @@
   "author": "Amadeusz Zabierowski",
   "license": "GPL-2.0-or-later",
   "bugs": {
-    "url": "https://github.com/Zabamd/QuizPlugin/issues"
+    "url": "https://github.com/Zabamd/QuickQuizPlugin/issues"
   },
-  "homepage": "https://github.com/Zabamd/QuizPlugin#readme"
+  "homepage": "https://github.com/Zabamd/QuickQuizPlugin#readme"
 }
