@@ -1,5 +1,11 @@
-Licence: GPLv2 or later 
-https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Contributor: Zabamd (Amadeusz Zabierowski)
+Tags: gutenberg, block, quiz, single-choice
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
+Description
+
+Plugin that adds gutenberg block for Single Choice Quiz design.
 
 Copyright (C) 2023 Amadeusz Zabierowski
  

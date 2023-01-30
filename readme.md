@@ -1,2 +1,2 @@
 # Single Choice Quiz Plugin
-### Wordpress plugin created for single choice quiz design.
+### Plugin that adds gutenberg block for Single Choice Quiz design.
