@@ -11,10 +11,10 @@ import {
 wp.blocks.registerBlockType("quizblock/mainquiz", {
   title: "Quiz Block",
   description: "My Quiz Block",
-  category: 'quickquiz',
+  category: "quickquiz",
   edit: EditComponent,
   save: SaveComponent,
-  icon: 'editor-paste-word',
+  icon: "editor-paste-word",
   attributes: {
     Question: { type: "string" },
     AnswersArray: { type: "array", default: [] },
@@ -113,9 +113,7 @@ function EditComponent(props) {
           );
         }
       )}
-      <Button isPrimary onClick={onAddAnswerClick}>
-        Add another answer
-      </Button>
+      <Button onClick={onAddAnswerClick}>Add another answer</Button>
     </div>
   );
 }

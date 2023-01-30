@@ -2,6 +2,74 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/quizFront.js":
+/*!**************************!*\
+  !*** ./src/quizFront.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _quizFront_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./quizFront.scss */ "./src/quizFront.scss");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+const QuizFront = _ref => {
+  let {
+    props
+  } = _ref;
+  const [haveGuessed, setHaveGuessed] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false);
+  const [answeredCorrectly, setAnsweredCorrectly] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)("");
+  const onAnswerClick = answerIndex => {
+    if (answerIndex === Number(props.correctAnswer)) {
+      setAnsweredCorrectly(true);
+    } else {
+      setAnsweredCorrectly(false);
+    }
+    setHaveGuessed(true);
+  };
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: `quickQuiz_quizFrontWrapper result-${answeredCorrectly}`
+  }, !haveGuessed && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
+    className: "questionHeading"
+  }, props.question), !haveGuessed && props.answers.map((answer, answerIndex) => {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
+      onClick: () => {
+        onAnswerClick(answerIndex);
+      },
+      className: "answerButton",
+      key: answerIndex
+    }, answer);
+  }), haveGuessed && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: `resultWrapper result-${answeredCorrectly}`
+  }, answeredCorrectly && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "afterGuessMessage"
+  }, "Congratulations! Correct Answer"), !answeredCorrectly && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "afterGuessMessage"
+  }, " Good luck next time!")));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (QuizFront);
+
+/***/ }),
+
+/***/ "./src/quizFront.scss":
+/*!****************************!*\
+  !*** ./src/quizFront.scss ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/quizOutput.scss":
 /*!*****************************!*\
   !*** ./src/quizOutput.scss ***!
@@ -126,52 +194,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "react-dom");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _quizFront__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./quizFront */ "./src/quizFront.js");
 
 
 
 
 
-const QuizFront = _ref => {
-  let {
-    props
-  } = _ref;
-  const [haveGuessed, setHaveGuessed] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false);
-  const [answeredCorrectly, setAnsweredCorrectly] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)("");
-  const onAnswerClick = answerIndex => {
-    if (answerIndex === Number(props.correctAnswer)) {
-      setAnsweredCorrectly(true);
-    } else {
-      setAnsweredCorrectly(false);
-    }
-    setHaveGuessed(true);
-  };
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: `quickQuiz_quizFrontWrapper result-${answeredCorrectly}`
-  }, !haveGuessed && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
-    className: "questionHeading"
-  }, props.question), !haveGuessed && props.answers.map((answer, answerIndex) => {
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-      onClick: () => {
-        onAnswerClick(answerIndex);
-      },
-      className: "answerButton",
-      key: answerIndex
-    }, answer);
-  }), haveGuessed && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: `resultWrapper result-${answeredCorrectly}`
-  }, answeredCorrectly && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    className: "afterGuessMessage"
-  }, "Congratulations! Correct Answer"), !answeredCorrectly && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    className: "afterGuessMessage"
-  }, " Good luck next time!")));
-};
 const onDOMContentLoaded = () => {
   const placeholderSelector = [].slice.call(document.getElementsByClassName("quickQuiz_quizPlaceholder"));
   placeholderSelector.forEach(element => {
     const question = element.children[0].textContent;
     const answers = element.children[1].textContent.split(",");
     const correctAnswer = element.children[2].textContent;
-    react_dom__WEBPACK_IMPORTED_MODULE_3___default().render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(QuizFront, {
+    react_dom__WEBPACK_IMPORTED_MODULE_3___default().render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_quizFront__WEBPACK_IMPORTED_MODULE_4__["default"], {
       props: {
         question,
         answers,

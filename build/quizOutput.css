@@ -4,7 +4,9 @@
 .quickQuiz_quizPlaceholder {
   display: none;
 }
-
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/quizFront.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
 .quickQuiz_quizFrontWrapper {
   border-radius: 54px;
   background: linear-gradient(145deg, #e6e6e6, #ffffff);
@@ -46,13 +48,7 @@
 }
 .quickQuiz_quizFrontWrapper .resultWrapper {
   width: 100%;
-  background: linear-gradient(145deg, #e6e6e6, #ffffff);
-}
-.quickQuiz_quizFrontWrapper .resultWrapper.result-false {
-  background: linear-gradient(145deg, #dd3838, #ff4242);
-}
-.quickQuiz_quizFrontWrapper .resultWrapper.result-true {
-  background: linear-gradient(145deg, #4ede4e, #5dff5d);
+  background: none;
 }
 .quickQuiz_quizFrontWrapper .resultWrapper .afterGuessMessage {
   padding: 25px;

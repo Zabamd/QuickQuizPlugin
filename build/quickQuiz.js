@@ -120,10 +120,10 @@ __webpack_require__.r(__webpack_exports__);
 wp.blocks.registerBlockType("quizblock/mainquiz", {
   title: "Quiz Block",
   description: "My Quiz Block",
-  category: 'quickquiz',
+  category: "quickquiz",
   edit: EditComponent,
   save: SaveComponent,
-  icon: 'editor-paste-word',
+  icon: "editor-paste-word",
   attributes: {
     Question: {
       type: "string"
@@ -207,7 +207,6 @@ function EditComponent(props) {
       icon: "trash"
     }))));
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-    isPrimary: true,
     onClick: onAddAnswerClick
   }, "Add another answer"));
 }

@@ -79,10 +79,13 @@ class QuickQuiz
         return $block_categories;
     }
 
-    public function loadFrontEnd()
+    public function loadFrontEnd() : void
     {
         wp_enqueue_script( 'quizoutput', plugin_dir_url(__FILE__)."/build/quizOutput.js", ['wp-element'] );
+        wp_enqueue_script( 'quizfront', plugin_dir_url(__FILE__)."/build/quizFront.js", ['wp-element'] );
         wp_enqueue_style( 'quizoutput_style', plugin_dir_url(__FILE__)."/build/quizOutput.css" );
+        wp_enqueue_style( 'quizfront_style', plugin_dir_url(__FILE__)."/build/quizFront.css" );
+
     } 
 }
 
